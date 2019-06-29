@@ -56,7 +56,7 @@ const createBlockchain = num => {
   let previousBlock = blockchain[0];
 
   for (let i = 1; i < num; i += 1) {
-    const newBlock = blockchain.addBlock(new Block(Date.now(), `this is block ${i}`));
+    const newBlock = blockchain.addBlock(new Block(i, Date.now(), `this is block ${i}`));
     previousBlock = newBlock;
   }
   console.log(blockchain);
@@ -66,4 +66,4 @@ const createBlockchain = num => {
 // Generate test data:
 
 const lengthToCreate = 20;
-createBlockchain(lengthToCreate);  
+createBlockchain(lengthToCreate);
