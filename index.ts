@@ -1,7 +1,7 @@
 import Block from "./block.js";
 import Blockchain from "./blockchain.js";
 
-function createBlockchain(num) {
+function createBlockchain(num: number) {
   const blockchain = new Blockchain();
   let previousBlock = blockchain[0];
 
