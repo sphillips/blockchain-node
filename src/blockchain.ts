@@ -1,6 +1,8 @@
 import Block from "./block.js";
 
 class Blockchain {
+  chain: Block[];
+
   constructor() {
     this.chain = [this.createGenesisBlock()];
   }
@@ -13,7 +15,7 @@ class Blockchain {
     return this.chain[this.chain.length - 1];
   }
 
-  addBlock(newBlock) {
+  addBlock(newBlock: Block) {
     newBlock.prevHash = this.latestBlock().hash;
     newBlock.hash = newBlock.calculateHash();
     this.chain.push(newBlock);

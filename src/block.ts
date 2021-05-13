@@ -1,10 +1,10 @@
-import sha256 from "js-sha256";
+import { sha256 } from "js-sha256";
 
 class Block {
   index: number;
   timestamp: number;
   data: string;
-  prevHash: string;
+  prevHash?: string;
   hash: string;
 
   constructor(
